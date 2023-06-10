@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <main className="bg-slate-100 mb-[50px]">
       <Carousel />
-      <VideoCardList title="Trending" path="/videos/trending" />
-      <VideoCardList title="BDTOON Originals" path="/videos/trending" />
-      <VideoCardList title="Thriller" path="/videos/trending" />
-      <VideoCardList title="Comedy" path="/videos/trending" />
+      <VideoCardList title="Trending" path="/category/trending" />
+      <VideoCardList title="BDTOON Originals" path="/category/originals" />
+      <VideoCardList title="Thriller" path="/category/thriller" />
+      <VideoCardList title="Comedy" path="/category/comedy" />
     </main>
   );
 }
