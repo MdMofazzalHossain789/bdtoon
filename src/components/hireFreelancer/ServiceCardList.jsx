@@ -12,7 +12,7 @@ export default function ServiceCardList() {
           href={"/"}
           className="button bg-opacity-0 bg-slate-300 dark:bg-slate-100 dark:bg-opacity-0 hover:bg-opacity-20 rounded-full"
         >
-          <p className="px-4 py-1 text-xs font-semibold text-green-500 dark:text-green-400">
+          <p className="button px-4 py-1 text-xs font-semibold text-green-500 dark:text-green-400">
             See all
           </p>
         </Link>

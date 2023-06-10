@@ -4,12 +4,14 @@ import ServiceCardList from "@/components/hireFreelancer/ServiceCardList";
 
 export default function HireAnimator() {
   return (
-    <div className="h-screen bg-slate-50 mb-[120px]">
-      <div className="my-6">
-        <Search />
+    <div className="h-full bg-slate-50 dark:bg-slate-800 ">
+      <div className="pb-[20px]">
+        <div className="py-6">
+          <Search />
+        </div>
+        <ServiceCardList />
+        <ExploreCard />
       </div>
-      <ServiceCardList />
-      <ExploreCard />
     </div>
   );
 }

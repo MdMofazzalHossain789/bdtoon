@@ -2,22 +2,26 @@ import ReactButton from "./ReactButton";
 
 export default function PostCard() {
   return (
-    <div className="bg-slate-800 shadow-md mb-2">
-      <header className="flex items-center py-2 mx-2 ">
-        <img
-          src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
-          alt="test"
-          className="h-10 w-10 rounded-full mr-1"
-        />
+    <div className=" bg-slate-50 dark:bg-slate-800 shadow-md mb-1">
+      <header className="flex items-center py-2 mx-2 text-slate-600 dark:text-slate-300">
+        <div className="active:opacity-10">
+          <img
+            src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
+            alt="test"
+            className="button h-8 w-8 rounded-full mr-1 opacity-100"
+          />
+        </div>
         <div className="flex flex-col">
-          <p className="text-xs font-semibold">Md Mofazzal Hossain</p>
-          <p className="text-[10px] text-slate-600 dark:text-slate-300">
+          <p className="text-xs font-semibold text-slate-800 dark:text-slate-100">
+            Md Mofazzal Hossain
+          </p>
+          <p className="text-[10px] text-slate-700 dark:text-slate-300">
             20 May 2023
           </p>
         </div>
       </header>
       <main>
-        <article className="my-2 text-xs mx-4">
+        <article className="mb-2 text-xs mx-2 text-slate-700 dark:text-slate-200">
           Hello , I am drawing this.. Help me with your feedback
         </article>
         <div className="relative w-screen h-[300px]">
