@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NavbarItemList />
-        <div className="bg-slate-100 dark:bg-slate-800">{children}</div>
+        <div className="text-slate-800 dark:text-slate-100 bg-slate-100 dark:bg-slate-900 w-screen h-screen">
+          {children}
+        </div>
       </body>
     </html>
   );

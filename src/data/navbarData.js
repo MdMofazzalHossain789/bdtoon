@@ -40,7 +40,7 @@ export const NavbarData = [
   {
     id: "nd4",
     title: "gallery",
-    path: "/gallery",
+    path: "/gallery/all",
     defaultIcon: <CollectionsOutlinedIcon />,
     activeIcon: <CollectionsIcon />,
   },
