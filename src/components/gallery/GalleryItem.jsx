@@ -1,4 +1,4 @@
-export default function GalleryItem({ size }) {
+export default function GalleryItem({ imageUrl, alt }) {
   const MyEnum = {
     VALUE1: "col-span-2",
     VALUE2: "",
@@ -13,10 +13,9 @@ export default function GalleryItem({ size }) {
 
   return (
     <div className={`${randomEnumValue}`}>
-      <div className="text-white bg-slate-700">{size}</div>
       <img
-        src="https://static.vecteezy.com/system/resources/thumbnails/002/204/260/small/four-school-friends-educational-character-free-vector.jpg"
-        alt="test"
+        src={imageUrl}
+        alt={alt}
         className="h-full w-full object-cover rounded-sm active:opacity-70 transition-opacity ease-in-out"
       />
     </div>

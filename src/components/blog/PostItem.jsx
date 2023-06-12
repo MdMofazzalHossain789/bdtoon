@@ -1,6 +1,18 @@
 import ReactButton from "./ReactButton";
 
-export default function PostCard() {
+const getUser = async (userId) => {
+  const user = await fetch(
+    "https://jsonplaceholder.typicode.com/users/" + userId
+  );
+
+  if (!user) throw new Error("No user");
+
+  return user.json();
+};
+
+export default async function PostCard({ userId, title, body, imageUrl }) {
+  const { name } = await getUser(userId);
+
   return (
     <div className=" bg-slate-50 dark:bg-slate-800 shadow-md mb-1">
       <header className="flex items-center py-2 mx-2 text-slate-600 dark:text-slate-300">
@@ -13,7 +25,7 @@ export default function PostCard() {
         </div>
         <div className="flex flex-col">
           <p className="text-xs font-semibold text-slate-800 dark:text-slate-100">
-            Md Mofazzal Hossain
+            {name}
           </p>
           <p className="text-[10px] text-slate-700 dark:text-slate-300">
             20 May 2023
@@ -22,15 +34,17 @@ export default function PostCard() {
       </header>
       <main>
         <article className="mb-2 text-xs mx-2 text-slate-700 dark:text-slate-200">
-          Hello , I am drawing this.. Help me with your feedback
+          {title + body}
         </article>
-        <div className="relative w-screen h-[300px]">
-          <img
-            src="https://i.pinimg.com/564x/0d/c3/10/0dc310f78ff8199b7bc1d30e4fa8a2e0.jpg"
-            alt="test"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        {imageUrl && (
+          <div className="relative w-screen h-[300px]">
+            <img
+              src="https://i.pinimg.com/564x/0d/c3/10/0dc310f78ff8199b7bc1d30e4fa8a2e0.jpg"
+              alt="test"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        )}
       </main>
       <footer>
         <ReactButton />
