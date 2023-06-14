@@ -9,8 +9,8 @@ export default function HireAnimator() {
       <div className="py-6">
         <Search />
       </div>
-      <ServiceCardList />
       <ExploreCard />
+      <ServiceCardList />
       <BlankSpace />
     </div>
   );

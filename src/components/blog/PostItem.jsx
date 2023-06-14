@@ -2,16 +2,24 @@ import ReactButton from "./ReactButton";
 
 const getUser = async (userId) => {
   const user = await fetch(
-    "https://jsonplaceholder.typicode.com/users/" + userId
+    "https://api.slingacademy.com/v1/sample-data/users/" + userId
   );
 
   if (!user) throw new Error("No user");
 
-  return user.json();
+  const data = await user.json();
+
+  return data.user;
 };
 
-export default async function PostCard({ userId, title, body, imageUrl }) {
-  const { name } = await getUser(userId);
+export default async function PostCard({
+  userId,
+  title,
+  body,
+  imageUrl,
+  createdAt,
+}) {
+  const { first_name, last_name } = await getUser(userId);
 
   return (
     <div className=" bg-slate-50 dark:bg-slate-800 shadow-md mb-1">
@@ -25,10 +33,10 @@ export default async function PostCard({ userId, title, body, imageUrl }) {
         </div>
         <div className="flex flex-col">
           <p className="text-xs font-semibold text-slate-800 dark:text-slate-100">
-            {name}
+            {`${first_name} ${last_name}`}
           </p>
           <p className="text-[10px] text-slate-700 dark:text-slate-300">
-            20 May 2023
+            {createdAt}
           </p>
         </div>
       </header>
