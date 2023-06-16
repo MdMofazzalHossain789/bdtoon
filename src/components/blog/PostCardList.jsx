@@ -13,7 +13,6 @@ const getData = async () => {
 
 export default async function PostCardList() {
   const data = await getData();
-
   return (
     <div className="overflow-y-scroll">
       {data.map((post) => (

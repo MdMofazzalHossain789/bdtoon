@@ -26,7 +26,7 @@ export default function ReactButton() {
         )}
       </button>
       <div className="h-[20px] w-[2px] bg-slate-300 dark:bg-slate-500 rounded-full " />
-      <button className="m-1 py-[2px] button w-full h-full bg-slate-400 bg-opacity-0 dark:bg-slate-100 dark:bg-opacity-0 active:bg-opacity-10 rounded-md transition ease-in-out ">
+      <button className="relative m-1 py-[2px] button w-full h-full bg-slate-400 bg-opacity-0 dark:bg-slate-100 dark:bg-opacity-0 active:bg-opacity-10 rounded-md transition ease-in-out ">
         <ShareIcon className="text-[14px]" />
       </button>
     </div>

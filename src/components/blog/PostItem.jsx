@@ -1,5 +1,7 @@
+import moment from "moment";
 import ReactButton from "./ReactButton";
-
+import PostOptionList from "./PostOptionList";
+import Article from "./Article";
 const getUser = async (userId) => {
   const user = await fetch(
     "https://api.slingacademy.com/v1/sample-data/users/" + userId
@@ -19,30 +21,31 @@ export default async function PostCard({
   imageUrl,
   createdAt,
 }) {
+  const timeAgo = moment(createdAt).fromNow();
   const { first_name, last_name } = await getUser(userId);
 
   return (
     <div className=" bg-slate-50 dark:bg-slate-800 shadow-md mb-1">
       <header className="flex items-center py-2 mx-2 text-slate-600 dark:text-slate-300">
-        <div className="active:opacity-10">
+        <div className="active:opacity-80">
           <img
             src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
             alt="test"
-            className="button h-8 w-8 rounded-full mr-1 opacity-100"
+            className="button h-8 w-8 rounded-full opacity-100 mr-1"
           />
         </div>
-        <div className="flex flex-col">
-          <p className="text-xs font-semibold text-slate-800 dark:text-slate-100">
+        <div className="flex flex-col button">
+          <p className="text-xs font-semibold px-[2px] text-slate-800 dark:text-slate-100 bg-slate-900 dark:bg-slate-100 bg-opacity-0 dark:bg-opacity-0 active:bg-opacity-10 rounded-sm">
             {`${first_name} ${last_name}`}
           </p>
-          <p className="text-[10px] text-slate-700 dark:text-slate-300">
-            {createdAt}
+          <p className="text-[10px] text-slate-700 dark:text-slate-300 ml-1">
+            {timeAgo}
           </p>
         </div>
       </header>
       <main>
         <article className="mb-2 text-xs mx-2 text-slate-700 dark:text-slate-200">
-          {title + body}
+          <Article body={body} />
         </article>
         {imageUrl && (
           <div className="relative w-screen h-[300px]">
@@ -54,7 +57,8 @@ export default async function PostCard({
           </div>
         )}
       </main>
-      <footer>
+      <footer className="relative">
+        <PostOptionList show={false} />
         <ReactButton />
       </footer>
     </div>

@@ -4,8 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
-import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
-import CategoryIcon from "@mui/icons-material/Category";
+import SearchIcon from "@mui/icons-material/Search";
 
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import CollectionsIcon from "@mui/icons-material/Collections";
@@ -25,17 +24,10 @@ export const NavbarData = [
   },
   {
     id: "nd2",
-    title: "Category",
+    title: "Search",
     path: "/category",
-    defaultIcon: <CategoryOutlinedIcon />,
-    activeIcon: <CategoryIcon />,
-  },
-  {
-    id: "nd3",
-    title: "Shorts",
-    path: "/shorts",
-    defaultIcon: <PlayArrowOutlinedIcon />,
-    activeIcon: <PlayArrowIcon />,
+    defaultIcon: <SearchIcon />,
+    activeIcon: <SearchIcon />,
   },
   {
     id: "nd4",
