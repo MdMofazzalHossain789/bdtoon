@@ -27,7 +27,7 @@ export default function NavbarItemList() {
           );
         })}
       </nav>
-      <nav className="fixed top-0 left-0 right-0 z-50 text-slate-100 bg-slate-800 bg-opacity-80 backdrop-blur-sm">
+      <nav className="hidden sm:block fixed top-0 left-0 right-0 z-50 text-slate-100 bg-slate-800 bg-opacity-80 backdrop-blur-sm">
         <div className="max-w-7xl md:mx-auto flex justify-between items-center">
           <div className="text-2xl">
             <h1 className="uppercase font-bold">Bdtoon</h1>
