@@ -17,7 +17,7 @@ export default function NavbarItem({
       href={path}
     >
       <div
-        className={`${
+        className={`sm:hidden ${
           selected ? "text-green-500" : "text-slate-700 dark:text-slate-400"
         }`}
       >

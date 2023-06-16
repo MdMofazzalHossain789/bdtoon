@@ -14,16 +14,18 @@ const getData = async () => {
 export default async function PostCardList() {
   const data = await getData();
   return (
-    <div className="overflow-y-scroll">
-      {data.map((post) => (
-        <PostCard
-          key={post.id}
-          userId={post.user_id}
-          title={post.title}
-          body={post.content_text}
-          createdAt={post.created_at}
-        />
-      ))}
+    <div className="max-w-3xl mx-auto">
+      <div className="overflow-y-scroll">
+        {data.map((post) => (
+          <PostCard
+            key={post.id}
+            userId={post.user_id}
+            title={post.title}
+            body={post.content_text}
+            createdAt={post.created_at}
+          />
+        ))}
+      </div>
     </div>
   );
 }

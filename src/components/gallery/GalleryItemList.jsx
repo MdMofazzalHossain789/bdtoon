@@ -15,12 +15,18 @@ export default async function GalleryItemList() {
   const data = await getImages();
 
   return (
-    <div
-      className={`h-full grid grid-cols-2 sm:grid-cols-8 grid-flow-dense gap-1 px-2 py-2 overflow-y-scroll bg-slate-100 dark:bg-slate-900`}
-    >
-      {data.map((image) => (
-        <GalleryItem key={image.id} imageUrl={image.url} title={image.title} />
-      ))}
+    <div className="max-w-6xl mx-auto sm:mt-[60px]">
+      <div
+        className={`h-full grid grid-cols-2 sm:grid-cols-6 grid-flow-dense gap-1 px-2 py-2 overflow-y-scroll bg-slate-100 dark:bg-slate-900`}
+      >
+        {data.map((image) => (
+          <GalleryItem
+            key={image.id}
+            imageUrl={image.url}
+            title={image.title}
+          />
+        ))}
+      </div>
     </div>
   );
 }

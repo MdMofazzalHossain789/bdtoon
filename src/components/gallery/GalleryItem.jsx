@@ -12,7 +12,7 @@ export default function GalleryItem({ imageUrl, alt }) {
   const randomEnumValue = getRandomEnumValue(MyEnum);
 
   return (
-    <div className={`${randomEnumValue}`}>
+    <div className={`cursor-pointer ${randomEnumValue}`}>
       <img
         src={imageUrl}
         alt={alt}
