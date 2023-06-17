@@ -7,12 +7,12 @@ export default function CategoryList() {
     <div className="max-w-6xl mx-auto">
       <div className="pb-12 bg-slate-900">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 px-2 py-4">
-          {CategoryData.map(({ id, title, icon, path, imageUrl }) => (
+          {CategoryData.map(({ id, title, icon, url, imageUrl }) => (
             <CategoryItem
               key={id}
               title={title}
               icon={icon}
-              path={path}
+              path={`/category/${url}`}
               imageUrl={imageUrl}
             />
           ))}
