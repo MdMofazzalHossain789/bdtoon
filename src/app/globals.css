@@ -2,48 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-@layer components {
-  .button {
-    -webkit-user-drag: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    cursor: pointer;
-  }
-}
-
-img {
-  -webkit-user-drag: none;
+.no {
   user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  -webkit-user-drag: none;
   -moz-user-select: none;
+  -webkit-user-select: none;
 }
